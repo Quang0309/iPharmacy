@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "37018113728",
+    "firebase_url": "https://ipharmacy-19475.firebaseio.com",
+    "project_id": "ipharmacy-19475",
+    "storage_bucket": "ipharmacy-19475.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37018113728:android:f5ec341c314b85f7",
+        "android_client_info": {
+          "package_name": "com.example.quang.ipharmacy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37018113728-qva7k6uc0sjo890200pd9accr6j172bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkSQwBQhHxR9VeQW9VFZKwN6wZ79HJvOQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
