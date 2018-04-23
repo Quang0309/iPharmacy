@@ -1,67 +1,60 @@
-package com.example.quang.ipharmacy;
-
-import android.net.Uri;
-
-import java.util.Date;
+package com.example.quang.ipharmacy.model;
 
 /**
  * Created by cpu10475-local on 04/04/2018.
  */
 
 public class Medicine {
+
+    //private String id;
     private String name;
     private String image;
     private int quantity;
     private String lastModify;
-    //private String ID;
-    public Medicine(String name, String image, int quantity, String lastModify/*,String ID*/) {
+
+    public Medicine() {
+    }
+
+    public Medicine(String name, String image, int quantity, String lastModify) {
         this.name = name;
         this.image = image;
         this.quantity = quantity;
         this.lastModify = lastModify;
-        //this.ID = ID;
-    }
-
-    public Medicine() {
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public Medicine setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public Medicine setImage(String image) {
         this.image = image;
+        return this;
     }
 
     public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public Medicine setQuantity(int quantity) {
         this.quantity = quantity;
+        return this;
     }
 
     public String getLastModify() {
         return lastModify;
     }
 
-    public void setLastModify(String lastModify) {
+    public Medicine setLastModify(String lastModify) {
         this.lastModify = lastModify;
+        return this;
     }
-/*
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
-    }*/
 }
