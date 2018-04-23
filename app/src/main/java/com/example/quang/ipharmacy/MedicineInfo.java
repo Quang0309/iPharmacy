@@ -1,5 +1,6 @@
 package com.example.quang.ipharmacy;
 
+import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -15,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.EdgeEffect;
 import android.widget.EditText;
@@ -70,7 +72,7 @@ public class MedicineInfo extends AppCompatActivity {
         addEvents();
         init();
         getDataFromIntent();
-
+        //startAnimation();
     }
 
     private void addEvents() {
@@ -291,4 +293,19 @@ public class MedicineInfo extends AppCompatActivity {
         });
 
     }
+   /* private void startAnimation()
+    {
+        float start,end1,end2;
+        start = findViewById(R.id.relativeLayout).getHeight();
+        Toast.makeText(this,Float.toString(start),Toast.LENGTH_LONG).show();
+        end1 = findViewById(R.id.imgbtnName).getTop();
+        Toast.makeText(this,Float.toString(end1),Toast.LENGTH_LONG).show();
+        end2 =findViewById(R.id.txtInfoName).getTop();
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(findViewById(R.id.imgbtnName),"y",end1,start).setDuration(3000);
+        objectAnimator.setInterpolator(new AccelerateInterpolator());
+        ObjectAnimator objectAnimator1 = ObjectAnimator.ofFloat(findViewById(R.id.txtInfoName),"y",start,end2).setDuration(3000);
+        objectAnimator.setInterpolator(new AccelerateInterpolator());
+        objectAnimator.start();
+        objectAnimator1.start();
+    }*/
 }
