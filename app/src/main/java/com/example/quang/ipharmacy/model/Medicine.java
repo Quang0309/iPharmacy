@@ -1,7 +1,7 @@
 package com.example.quang.ipharmacy.model;
 
 /**
- * Created by cpu10475-local on 04/04/2018.
+ * Created by Quang on 04/04/2018.
  */
 
 public class Medicine {
