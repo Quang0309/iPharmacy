@@ -1,0 +1,33 @@
+Models: (Features: 1. View (Báo cáo) / 2. Delete / 3. Add / 4. Edit / 5. Search)
+    + Bác sĩ:
+        Tên | Địa chỉ | Chuyên khoa | Điện thoại | Ghi chú
+    + Dược sĩ:
+        Tên | Địa chỉ | Điện thoại | Ghi chú
+    + Khách hàng
+        Mã KH | Giới tính | Tên | Điện thoại | Tuổi  | Địa chỉ
+    + Loại thuốc:
+        Mã | Tên
+    + Loại hoạt chất:
+        Mã | Tên
+    + Nước sản xuất:
+        Mã | Tên
+    + Nhà cung cấp:
+        Mã | Tên | Địa chỉ | Điện thoại | Số đăng ký Kinh Doanh | Ghi chú
+    + Đơn vị tính:
+        Mã | Tên Đơn vị
+    + Bệnh:
+        Mã | Tên Bệnh
+    + Thuốc:
+        Mã | Loại thuốc | Tên | Số lô | Ngày SX | Hạn sử dụng | Số lượng tồn | Đơn vị tính | Nước sản xuất | Vị trí thuốc | Ghi chú | Hoạt chất | Đơn giá
+    + Sản phẩm ngoài thuốc:
+        Mã | Tên | Số lô | Ngày SX | Hạn sử dụng | Số lượng tồn | Đơn vị tính | Nước sản xuất | Vị trí thuốc | Ghi chú | Đơn giá
+
+Features:
+5. Đăng nhập / Đăng ký / Tạo tiệm thuốc / Database for Multi users
+6. Hóa đơn
+    + Hóa đơn nhập
+        Image
+    + Hóa đơn xuất
+        Image
+7. Cảnh báo hạn sử dụng (n tháng tới) - Print / Show
+8. Cảnh báo thuốc sắp hết số lượng (còn dưới x% số lượng nhập) - Print / Show 
