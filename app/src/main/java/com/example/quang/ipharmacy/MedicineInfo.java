@@ -114,7 +114,7 @@ public class MedicineInfo extends AppCompatActivity {
                     uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            Toast.makeText(MedicineInfo.this,"looppppp",Toast.LENGTH_LONG).show();
+                           // Toast.makeText(MedicineInfo.this,"looppppp",Toast.LENGTH_LONG).show();
                             Log.e("Here","Before");
                            medicine.setImage(String.valueOf(taskSnapshot.getDownloadUrl()));
                             Log.e("Here","After");

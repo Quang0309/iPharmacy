@@ -48,7 +48,7 @@ public class ScanCodeActivity extends AppCompatActivity {
                             //                                          int[] grantResults)
                             // to handle the case where the user grants the permission. See the documentation
                             // for ActivityCompat#requestPermissions for more details.
-                            if (checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
+
                                 requestPermissions(new String[]{android.Manifest.permission.CAMERA}, 123);
                             return;
                         }
