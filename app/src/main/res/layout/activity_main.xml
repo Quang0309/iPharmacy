@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.quang.ipharmacy.MainActivity">
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtBarcode"
-        android:gravity="center_horizontal"
+        android:id="@+id/btnLang"
+        android:text="@string/chang_language"
         android:layout_centerHorizontal="true"/>
 
     <Button
@@ -19,5 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="Scan Barcode" />
+        android:text= "@string/scan_text"/>
+
 </RelativeLayout>

@@ -31,7 +31,7 @@
 
 
     <EditText
-
+        android:hint="@string/medicine_name"
         android:layout_margin="15dp"
         android:gravity="center"
         android:textColor="#FFFAFA"
@@ -63,7 +63,8 @@
         android:background="@drawable/round_text"
         android:layout_below="@id/txtInfoName"
         android:inputType="numberDecimal"
-        android:id="@+id/txtQuantity"/>
+        android:id="@+id/txtQuantity"
+        android:hint="@string/medicine_quantity"/>
     <ImageButton
         android:id="@+id/imgbtnQuantity"
         android:src="@drawable/ic_action_q"
@@ -85,6 +86,7 @@
         android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:background="@drawable/round_text"
+        android:hint="@string/medicine_date"
         android:id="@+id/txtInfoLastModify"/>
     <ImageButton
         android:id="@+id/imgbtnDate"
