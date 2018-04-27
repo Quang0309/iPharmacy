@@ -20,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.quang.ipharmacy.model.Medicine;
+import com.example.quang.ipharmacy.model.MedicineTemp;
 import com.firebase.ui.storage.images.FirebaseImageLoader;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -46,7 +46,7 @@ public class MedicineInfo extends AppCompatActivity {
     DatabaseReference databaseReference;
     FirebaseStorage storage;
     StorageReference storageReference;
-    Medicine medicine;
+    MedicineTemp medicineTemp;
     EditText txtInfoName,txtInfoLastModify,txtQuantity;
     ImageView imgInfo;
     Button btnSave;
@@ -100,7 +100,7 @@ public class MedicineInfo extends AppCompatActivity {
 
                 if(bytes!=null)
                 {
-                    medicine = new Medicine(name,URL,quantity,txtInfoLastModify.getText().toString());
+                    medicineTemp = new MedicineTemp(name,URL,quantity,txtInfoLastModify.getText().toString());
                     StorageReference riversRef = storageReference.child(ID+file.getLastPathSegment());
                     uploadTask = riversRef.putBytes(bytes);
                     uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -108,10 +108,10 @@ public class MedicineInfo extends AppCompatActivity {
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                            // Toast.makeText(MedicineInfo.this,"looppppp",Toast.LENGTH_LONG).show();
                             Log.e("Here","Before");
-                           medicine.setImage(String.valueOf(taskSnapshot.getDownloadUrl()));
+                           medicineTemp.setImage(String.valueOf(taskSnapshot.getDownloadUrl()));
                             Log.e("Here","After");
-                            Log.e("Here", String.valueOf(medicine.getImage()));
-                            databaseReference.child(ID).setValue(medicine);
+                            Log.e("Here", String.valueOf(medicineTemp.getImage()));
+                            databaseReference.child(ID).setValue(medicineTemp);
                             Log.e("Here","Forever");
                             dialog.dismiss();
                             finish();
@@ -120,12 +120,12 @@ public class MedicineInfo extends AppCompatActivity {
 
 
                 }
-                else if (medicine!=null)
+                else if (medicineTemp !=null)
                 {
-                    medicine.setQuantity(Integer.parseInt(txtQuantity.getText().toString()));
-                    medicine.setName(txtInfoName.getText().toString());
-                    medicine.setLastModify(txtInfoLastModify.getText().toString());
-                    databaseReference.child(ID).setValue(medicine);
+                    medicineTemp.setQuantity(Integer.parseInt(txtQuantity.getText().toString()));
+                    medicineTemp.setName(txtInfoName.getText().toString());
+                    medicineTemp.setLastModify(txtInfoLastModify.getText().toString());
+                    databaseReference.child(ID).setValue(medicineTemp);
                     dialog.dismiss();
                     finish();
                 }
@@ -220,10 +220,10 @@ public class MedicineInfo extends AppCompatActivity {
     }
 
     private void loadData() {
-        txtInfoName.setText(medicine.getName());
-        txtQuantity.setText(Integer.toString(medicine.getQuantity()));
-        txtInfoLastModify.setText( medicine.getLastModify());
-        storageReference = storage.getReferenceFromUrl(medicine.getImage());
+        txtInfoName.setText(medicineTemp.getName());
+        txtQuantity.setText(Integer.toString(medicineTemp.getQuantity()));
+        txtInfoLastModify.setText( medicineTemp.getLastModify());
+        storageReference = storage.getReferenceFromUrl(medicineTemp.getImage());
         Glide.with(getApplicationContext()).using(new FirebaseImageLoader()).load(storageReference).into(imgInfo);
     }
     private void loadDate() // ko co trong data thi nhap vo, last modify la ngay hom nay
@@ -249,17 +249,17 @@ public class MedicineInfo extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot snapshot: dataSnapshot.getChildren()) //loading medicine from database
+                for(DataSnapshot snapshot: dataSnapshot.getChildren()) //loading medicineTemp from database
                 {                                                       // if exists.
                     if (snapshot.getKey().equals(ID)) {
                         //Toast.makeText(MedicineInfo.this,"helloooooo",Toast.LENGTH_LONG).show();
-                        Medicine temp = snapshot.getValue(Medicine.class);
-                        medicine = temp;
+                        MedicineTemp temp = snapshot.getValue(MedicineTemp.class);
+                        medicineTemp = temp;
                         loadData();
                     }
                   // Toast.makeText(MedicineInfo.this,snapshot.getKey(),Toast.LENGTH_LONG).show();
                 }
-                if(medicine==null)
+                if(medicineTemp ==null)
                 {
                     alertDialog = new AlertDialog.Builder(MedicineInfo.this);
                     alertDialog.setMessage("Please input the following information");
