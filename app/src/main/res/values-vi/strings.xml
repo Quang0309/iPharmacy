@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iPharmacy</string>
+    <string name="scan_text" translatable="false">Quét Mã</string>
+    <string name="medicine_name" translatable="false">Tên Thuốc</string>
+    <string name="medicine_quantity" translatable="false">Số lượng</string>
+    <string name="medicine_date" translatable="false">Ngày Nhập</string>
+    <string name="chang_language">Đổi Ngôn Ngữ</string>
+    <string name="save">Lưu</string>
+</resources>
