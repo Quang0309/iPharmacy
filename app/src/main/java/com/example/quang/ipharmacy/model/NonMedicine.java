@@ -3,15 +3,13 @@ package com.example.quang.ipharmacy.model;
 import java.util.List;
 
 /**
- * Created by VVLv on 04/26/2018.
+ * Created by VVLv on 04/27/2018.
  */
 
-public class Medicine {
+public class NonMedicine {
     private String id;
     private String shortName;
     private String name;
-    private List<MedicineType> types;
-    private List<Chemical> chemicals;
     private String productionBatch;
     private String MFGDate;
     private String EXPDate;
@@ -21,25 +19,21 @@ public class Medicine {
     private Location location;
     private String note;
 
-    public Medicine() {
+    public NonMedicine() {
     }
 
-    public Medicine(String shortName,
-                    String name,
-                    List<MedicineType> types,
-                    List<Chemical> chemicals,
-                    String productionBatch,
-                    String MFGDate,
-                    String EXPDate,
-                    int quantity,
-                    List<Unit> units,
-                    Country country,
-                    Location location,
-                    String note) {
+    public NonMedicine(String shortName,
+                       String name,
+                       String productionBatch,
+                       String MFGDate,
+                       String EXPDate,
+                       int quantity,
+                       List<Unit> units,
+                       Country country,
+                       Location location,
+                       String note) {
         this.shortName = shortName;
         this.name = name;
-        this.types = types;
-        this.chemicals = chemicals;
         this.productionBatch = productionBatch;
         this.MFGDate = MFGDate;
         this.EXPDate = EXPDate;
@@ -54,7 +48,7 @@ public class Medicine {
         return id;
     }
 
-    public Medicine setId(String id) {
+    public NonMedicine setId(String id) {
         this.id = id;
         return this;
     }
@@ -63,7 +57,7 @@ public class Medicine {
         return shortName;
     }
 
-    public Medicine setShortName(String shortName) {
+    public NonMedicine setShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
@@ -72,26 +66,8 @@ public class Medicine {
         return name;
     }
 
-    public Medicine setName(String name) {
+    public NonMedicine setName(String name) {
         this.name = name;
-        return this;
-    }
-
-    public List<MedicineType> getTypes() {
-        return types;
-    }
-
-    public Medicine setTypes(List<MedicineType> types) {
-        this.types = types;
-        return this;
-    }
-
-    public List<Chemical> getChemicals() {
-        return chemicals;
-    }
-
-    public Medicine setChemicals(List<Chemical> chemicals) {
-        this.chemicals = chemicals;
         return this;
     }
 
@@ -99,7 +75,7 @@ public class Medicine {
         return productionBatch;
     }
 
-    public Medicine setProductionBatch(String productionBatch) {
+    public NonMedicine setProductionBatch(String productionBatch) {
         this.productionBatch = productionBatch;
         return this;
     }
@@ -108,7 +84,7 @@ public class Medicine {
         return MFGDate;
     }
 
-    public Medicine setMFGDate(String MFGDate) {
+    public NonMedicine setMFGDate(String MFGDate) {
         this.MFGDate = MFGDate;
         return this;
     }
@@ -117,7 +93,7 @@ public class Medicine {
         return EXPDate;
     }
 
-    public Medicine setEXPDate(String EXPDate) {
+    public NonMedicine setEXPDate(String EXPDate) {
         this.EXPDate = EXPDate;
         return this;
     }
@@ -126,7 +102,7 @@ public class Medicine {
         return quantity;
     }
 
-    public Medicine setQuantity(int quantity) {
+    public NonMedicine setQuantity(int quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -135,7 +111,7 @@ public class Medicine {
         return units;
     }
 
-    public Medicine setUnits(List<Unit> units) {
+    public NonMedicine setUnits(List<Unit> units) {
         this.units = units;
         return this;
     }
@@ -144,7 +120,7 @@ public class Medicine {
         return country;
     }
 
-    public Medicine setCountry(Country country) {
+    public NonMedicine setCountry(Country country) {
         this.country = country;
         return this;
     }
@@ -153,7 +129,7 @@ public class Medicine {
         return location;
     }
 
-    public Medicine setLocation(Location location) {
+    public NonMedicine setLocation(Location location) {
         this.location = location;
         return this;
     }
@@ -162,7 +138,7 @@ public class Medicine {
         return note;
     }
 
-    public Medicine setNote(String note) {
+    public NonMedicine setNote(String note) {
         this.note = note;
         return this;
     }
